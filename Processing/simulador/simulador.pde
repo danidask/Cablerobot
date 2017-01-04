@@ -21,11 +21,8 @@ void setup() {
 
   effector = new Effector(new PVector(0, 0, 0), espaciadoef);
 
-
   translate(width/2, height/2, 0);
-  scale(escala, escala, escala);
-  pushMatrix();
-  pushMatrix();
+  //scale(escala, escala, escala);
 }
 
 void draw() {
@@ -34,9 +31,7 @@ void draw() {
   float longitudC;
   float distsuelo;
 
-  popMatrix();
-
-
+  
   background(255);
 
   stroke(0);
@@ -77,7 +72,6 @@ void draw() {
   line(AnclajeA.x, AnclajeA.y, AnclajeA.z, AnclajeA.x, AnclajeA.y, AnclajeA.z - distsuelo);
   line(AnclajeB.x, AnclajeB.y, AnclajeB.z, AnclajeB.x, AnclajeB.y, AnclajeB.z - distsuelo);
   line(AnclajeC.x, AnclajeC.y, AnclajeC.z, AnclajeC.x, AnclajeC.y, AnclajeC.z - distsuelo);
-  pushMatrix();
 }
 
 void keyPressed() {
@@ -112,87 +106,8 @@ void keyPressed() {
     case 'a':
       effector.move(new PVector(0, 0, -10));
       break;
-    case 'w':
-      popMatrix();
-      rotateY(PI/18);
-      pushMatrix();
-      break;
-    case 's':
-      popMatrix();
-      rotateY(-PI/18);
-      pushMatrix();
-      break;
-    case 'e':
-      popMatrix();
-      rotateX(PI/18);
-      pushMatrix();
-      break;
-    case 'd':
-      popMatrix();
-      rotateX(-PI/18);
-      pushMatrix();
-      break;
-    case 'r':
-      popMatrix();
-      rotateZ(PI/18);
-      pushMatrix();
-      break;
-    case 'f':
-      popMatrix();
-      rotateZ(-PI/18);
-      pushMatrix();
-      break;
-    case 't':
-      popMatrix();   
-      popMatrix();
-      pushMatrix();
-      pushMatrix();
-      break;
     default:
       break;
     }
-  }
-}
-
-void mouseDragged() {
-  if (mouseButton == RIGHT) {
-    if (abs(mouseX - pmouseX) > 3) {
-      popMatrix();
-      if (mouseX < pmouseX) {
-        rotateY(PI/90);
-      } else {
-        rotateY(-PI/90);
-      }
-      pushMatrix();
-    }
-    if (abs(mouseY - pmouseY) > 3) {
-      popMatrix();
-      if (mouseY < pmouseY) {
-        rotateX(PI/90);
-      } else {
-        rotateX(-PI/90);
-      }
-      pushMatrix();
-    }
-  }
-}
-
-void mouseWheel(MouseEvent event) {
-  float e = event.getCount();
-  popMatrix();
-  if (e < 0) {
-    rotateZ(PI/45);
-  } else {
-    rotateZ(-PI/45);
-  }
-  pushMatrix();
-}
-
-void mousePressed() {
-  if (mouseButton == CENTER) {
-    popMatrix();   
-    popMatrix();
-    pushMatrix();
-    pushMatrix();
   }
 }

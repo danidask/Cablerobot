@@ -1,5 +1,5 @@
 
-
+/*
 void movermotor0() {
   int pasos = pasosmotor[0];
   boolean pasoactual = false;
@@ -62,3 +62,4 @@ void activarmotor(int motor, boolean activar)
 void configurarpines(){
   println("test: configurar pies");
 }
+*/
