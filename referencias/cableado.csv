@@ -1,0 +1,14 @@
+,,RASBPERRY,,POLOLU,,COLOR
+MOTOR X,DIR,17,11,,,AMARILLO
+,STEP,27,13,,,NARANJA
+,ENABLE,22,15,,,VERDE
+,5V,,4,,,ROJO
+,GROUND,,6,,,MARRON
+,,,,,,
+,DIR,11,,,,azul
+,STEP,9,,,,morado
+,ENABLE,10,,,,gris
+,,,,,,
+,ENABLE,18,,,,gris
+,DIR,23,,,,blanco
+,STEP,24,,,,negro
