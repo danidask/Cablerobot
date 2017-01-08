@@ -4,6 +4,10 @@ int maximonumeropasos = 100000;
 int numerodemotores = 3; //no se puede cambiar solo aqui
 int[] pasosmotor = new int[numerodemotores];
 
+int motorA = 2;
+int motorB = 0;
+int motorC = 1;
+
 int[] Aretardos0  = new int[maximonumeropasos];
 int[] Aretardos1  = new int[maximonumeropasos];
 int[] Aretardos2  = new int[maximonumeropasos];
@@ -17,17 +21,17 @@ int segundoretardo = 2;
 
 void configurarpines() {
   // Motor X
-  motorenablepin[0] = 22;
-  motorsteppin[0] = 27;
-  motordirpin[0] = 17;
+  motorenablepin[motorA] = 22;
+  motorsteppin[motorA] = 27;
+  motordirpin[motorA] = 17;
   // Motor Y  
-  motorenablepin[1] = 10;
-  motorsteppin[1] = 9;
-  motordirpin[1] = 11;
+  motorenablepin[motorB] = 10;
+  motorsteppin[motorB] = 9;
+  motordirpin[motorB] = 11;
   // Motor Z  
-  motorenablepin[2] = 18;
-  motorsteppin[2] = 23;
-  motordirpin[2] = 24;
+  motorenablepin[motorC] = 18;
+  motorsteppin[motorC] = 23;
+  motordirpin[motorC] = 24;
 
   for (int i=0; i < numerodemotores; i++) {
     GPIO.pinMode(motorenablepin[i], GPIO.OUTPUT);

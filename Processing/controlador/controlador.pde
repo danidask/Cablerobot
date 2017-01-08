@@ -1,8 +1,8 @@
-float espaciado = 300;
-float altura = 400;
-float espaciadoef = 40;
-float escala = 0.9;
-float pasosporcentimetro = 10;
+float espaciado = 150;
+float altura = 235;
+float espaciadoef = 9;
+float escala = 1;
+float pasosporcentimetro = 30;
 
 float longitudA;
 float longitudB;

@@ -34,13 +34,12 @@ void configurarpines() {
     GPIO.pinMode(motorsteppin[i], GPIO.OUTPUT);
     GPIO.pinMode(motordirpin[i], GPIO.OUTPUT);
   }
-  
+
   for (int i=0; i < numerodemotores; i++) {
     GPIO.digitalWrite(motorenablepin[i], GPIO.LOW);
     GPIO.digitalWrite(motorsteppin[i], GPIO.LOW);
     GPIO.digitalWrite(motordirpin[i], GPIO.LOW);
   }
-  
 }
 
 void movermotores(int _pasosmotor0, int _pasosmotor1, int _pasosmotor2) {
